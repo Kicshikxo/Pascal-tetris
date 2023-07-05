@@ -15,13 +15,13 @@ procedure InitializeComponent;
         self.GameOverPanelRestartButton := new System.Windows.Forms.Button();
         self.GameSpeedLabel1 := new System.Windows.Forms.Label();
         self.GameSpeed1 := new System.Windows.Forms.TrackBar();
-        self.label2 := new System.Windows.Forms.Label();
+        self.GameOverLabel := new System.Windows.Forms.Label();
         self.MainTimer := new System.Windows.Forms.Timer(self.components);
         self.StartPanel := new System.Windows.Forms.Panel();
         self.BoostSpeedLabel2 := new System.Windows.Forms.Label();
         self.BoostSpeed2 := new System.Windows.Forms.TrackBar();
         self.GameSpeedLabel2 := new System.Windows.Forms.Label();
-        self.label1 := new System.Windows.Forms.Label();
+        self.TitleLabel := new System.Windows.Forms.Label();
         self.GameSpeed2 := new System.Windows.Forms.TrackBar();
         self.ExitButton := new System.Windows.Forms.Button();
         self.StartButton := new System.Windows.Forms.Button();
@@ -92,7 +92,7 @@ procedure InitializeComponent;
         self.GameOverPanel.Controls.Add(self.GameOverPanelRestartButton);
         self.GameOverPanel.Controls.Add(self.GameSpeedLabel1);
         self.GameOverPanel.Controls.Add(self.GameSpeed1);
-        self.GameOverPanel.Controls.Add(self.label2);
+        self.GameOverPanel.Controls.Add(self.GameOverLabel);
         self.GameOverPanel.Location := new System.Drawing.Point(12, 12);
         self.GameOverPanel.Name := 'GameOverPanel';
         self.GameOverPanel.Size := new System.Drawing.Size(463, 646);
@@ -180,15 +180,15 @@ procedure InitializeComponent;
         self.GameSpeed1.Value := 300;
         self.GameSpeed1.Scroll += GameSpeed1_Scroll;
         // 
-        // label2
+        // GameOverLabel
         // 
-        self.label2.Font := new System.Drawing.Font('Microsoft Sans Serif', 26.25, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
-        self.label2.Location := new System.Drawing.Point(3, 3);
-        self.label2.Name := 'label2';
-        self.label2.Size := new System.Drawing.Size(456, 65);
-        self.label2.TabIndex := 0;
-        self.label2.Text := 'Вы проиграли';
-        self.label2.TextAlign := System.Drawing.ContentAlignment.MiddleCenter;
+        self.GameOverLabel.Font := new System.Drawing.Font('Microsoft Sans Serif', 26.25, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
+        self.GameOverLabel.Location := new System.Drawing.Point(3, 3);
+        self.GameOverLabel.Name := 'GameOverLabel';
+        self.GameOverLabel.Size := new System.Drawing.Size(456, 65);
+        self.GameOverLabel.TabIndex := 0;
+        self.GameOverLabel.Text := 'Вы проиграли';
+        self.GameOverLabel.TextAlign := System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // MainTimer
         // 
@@ -200,7 +200,7 @@ procedure InitializeComponent;
         self.StartPanel.Controls.Add(self.BoostSpeedLabel2);
         self.StartPanel.Controls.Add(self.BoostSpeed2);
         self.StartPanel.Controls.Add(self.GameSpeedLabel2);
-        self.StartPanel.Controls.Add(self.label1);
+        self.StartPanel.Controls.Add(self.TitleLabel);
         self.StartPanel.Controls.Add(self.GameSpeed2);
         self.StartPanel.Controls.Add(self.ExitButton);
         self.StartPanel.Controls.Add(self.StartButton);
@@ -243,15 +243,15 @@ procedure InitializeComponent;
         self.GameSpeedLabel2.Text := 'Обычная скорость: 300';
         self.GameSpeedLabel2.TextAlign := System.Drawing.ContentAlignment.TopCenter;
         // 
-        // label1
+        // TitleLabel
         // 
-        self.label1.Font := new System.Drawing.Font('Microsoft Sans Serif', 36, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
-        self.label1.Location := new System.Drawing.Point(3, 3);
-        self.label1.Name := 'label1';
-        self.label1.Size := new System.Drawing.Size(456, 76);
-        self.label1.TabIndex := 2;
-        self.label1.Text := 'Тетрис';
-        self.label1.TextAlign := System.Drawing.ContentAlignment.MiddleCenter;
+        self.TitleLabel.Font := new System.Drawing.Font('Microsoft Sans Serif', 36, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
+        self.TitleLabel.Location := new System.Drawing.Point(3, 3);
+        self.TitleLabel.Name := 'TitleLabel';
+        self.TitleLabel.Size := new System.Drawing.Size(456, 76);
+        self.TitleLabel.TabIndex := 2;
+        self.TitleLabel.Text := 'Тетрис';
+        self.TitleLabel.TextAlign := System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // GameSpeed2
         // 

@@ -32,12 +32,12 @@ type
     GameOverPanelRestartButton: Button;
     GameSpeedLabel1: &Label;
     GameSpeed1: TrackBar;
-    label2: &Label;
+    GameOverLabel: &Label;
     MainTimer: Timer;
     StartPanel: Panel;
     ExitButton: Button;
     StartButton: Button;
-    label1: &Label;
+    TitleLabel: &Label;
     GameSpeed2: TrackBar;
     GameSpeedLabel2: &Label;
     PauseButton: Button;
