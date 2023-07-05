@@ -6,11 +6,11 @@ uses System, System.Drawing, System.Windows.Forms;
 
 type
   MainForm = class(Form)
-    procedure Form1_Load(sender: Object; e: EventArgs);
+    procedure MainForm_Load(sender: Object; e: EventArgs);
     procedure StartButton_Click(sender: Object; e: EventArgs);
     procedure ExitButton_Click(sender: Object; e: EventArgs);
-    procedure Form1_KeyDown(sender: Object; e: KeyEventArgs);
-    procedure Form1_KeyUp(sender: Object; e: KeyEventArgs);
+    procedure MainForm_KeyDown(sender: Object; e: KeyEventArgs);
+    procedure MainForm_KeyUp(sender: Object; e: KeyEventArgs);
     procedure MoveTimer_Tick(sender: Object; e: EventArgs);
     procedure RestartButton_Click(sender: Object; e: EventArgs);
     procedure MainTimer_Tick(sender: Object; e: EventArgs);
@@ -338,7 +338,7 @@ begin
   
 end;
 
-procedure MainForm.Form1_Load(sender: Object; e: EventArgs);
+procedure MainForm.MainForm_Load(sender: Object; e: EventArgs);
 begin
   GamePictureBox.Image := gameImage;
   NextFigurePictureBox.Image := nextFigureImage;
@@ -437,7 +437,7 @@ begin
   end;
 end;
 
-procedure MainForm.Form1_KeyDown(sender: Object; e: KeyEventArgs);
+procedure MainForm.MainForm_KeyDown(sender: Object; e: KeyEventArgs);
 begin
   if (e.KeyValue = 38) and not pause then begin
     currentFigure.rotateFigure(figures);
@@ -466,7 +466,7 @@ begin
   isKeyDown := true;
 end;
 
-procedure MainForm.Form1_KeyUp(sender: Object; e: KeyEventArgs);
+procedure MainForm.MainForm_KeyUp(sender: Object; e: KeyEventArgs);
 begin
   if e.KeyValue = 37 then moveLeft  := false;
   if e.KeyValue = 39 then moveRight := false;
